@@ -7,27 +7,27 @@ export default function Home() {
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
                 <View style={styles.content}>
-                    <Text>conteudo</Text>
+                    <Text>conteúdo</Text>
                 </View>
 
             </ScrollView>

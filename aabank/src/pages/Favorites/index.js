@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Search(){
+export default function favorites(){
     return(
-        <View style={Styles.container}>
-            <Text>Pagina Buscar</Text>
+        <View style={styles.container}>
+        <Text>paginas salvos</Text>
         </View>
-    );
+);
+
 }
 
-const styles = StyleSheet. create({
+const styles = StyleSheet.create ({
     container:{
         flex:1,
-        backgroundColor:"#040316",
+        backgroundColor:'#040316',
         alignItems:'center',
         justifyContent:'center',
     },
 });
-
