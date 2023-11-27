@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, ScrollView, StatusBar, SafeAreaView, Platform } from "react-native";
 
-const statusBarHeight = statusbar.currentHeight;
+const statusBarHeight = StatusBar.currentHeight;
 
 export default function Home() {
     return (
