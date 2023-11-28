@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Extrato from "./pages/Extrato";
 import Search from "./pages/Search";
 import Profile from "./pages/Profile";
+import BarCode from "./pages/BarCode";
 
 import ButtonNew from "./components/ButtonNew";
 
@@ -45,8 +46,8 @@ export default function Routes() {
             />
 
             <Tab.Screen
-                name="Novo"
-                component={Home}
+                name="BarCode"
+                component={BarCode}
                 options={{
                     tabBarLabel: "",
                     tabBarIcon: ({ size, focused }) => (

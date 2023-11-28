@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins":[
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Permitir $(PRODUCT_NAME) acessar camera."
+        }
+      ]
+    ],
     "name": "aabank",
     "slug": "aabank",
     "version": "1.0.0",
