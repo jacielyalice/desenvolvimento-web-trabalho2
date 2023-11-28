@@ -5,8 +5,8 @@ import { AntDesign } from "@expo/vector-icons";
 
 export default function ButtonNew({ size, focused }) {
     return (
-        <View style={[styles.container, { backgroundColor: focused ? 'b4b54b' : "#FFFF00" }]}>
-            <Entypo name="plus" size={size} color={focused ? "#FFF" : "#f8f8f8"} />
+        <View style={[styles.container, { backgroundColor: focused ? '#ffff00' : "#b4b54b" }]}>
+            <AntDesign name="plus" size={size} color={focused ? "black" : "gray"} />
         </View>
     );
 }

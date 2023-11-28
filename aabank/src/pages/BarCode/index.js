@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
+import Header from "../../components/Header"
 
 export default function BarCode() {
     const [hasPermission, setHasPermission] = useState(null);
@@ -29,6 +30,7 @@ export default function BarCode() {
 
     return (
         <View style={styles.container}>
+            <Header title="BarCode Scanner" />
             <BarCodeScanner
                 onBarCodeScanned={scanned ? undefined : handleBarCodeScanned}
                 style={StyleSheet.absoluteFillObject}
@@ -53,13 +55,13 @@ const styles = StyleSheet.create({
         paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
-        backgroundColor: 'black',
+        backgroundColor: 'yellow',
     },
     text: {
         fontSize: 16,
         lineHeight: 21,
         fontWeight: 'bold',
         letterSpacing: 0.25,
-        color: 'white',
+        color: 'black',
     },
 });
