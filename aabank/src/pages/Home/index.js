@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         color: "white",
-        paddingStart: "15%%",
+        paddingStart: "15%",
         fontWeight: 'bold',
         fontSize: 20,
         paddingTop: 20

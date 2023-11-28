@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-import { Entypo } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 
 export default function ButtonNew({ size, focused }) {
     return (
         <View style={[styles.container, { backgroundColor: focused ? '#3eccf5' : "#6fdfff" }]}>
-            <Entypo name="plus" size={size} color={focused ? "#FFF" : "#f8f8f8"} />
+            <AntDesign name="barcode" size={size} color={focused ? "#FFF" : "#f8f8f8"} />
         </View>
     );
 }

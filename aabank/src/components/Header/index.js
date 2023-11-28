@@ -12,11 +12,11 @@ const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 :
 export default function Header({ titulo }) {
     return (
         <View style={styles.container}>
-            <View style={styles.iconback}>
-                <AntDesign name="arrowleft" size={24} color="white" />
+            <View style={[styles.iconback, { alignSelf: "flex-start" }]}>
+                <AntDesign name="left" size={24} color="white" />
             </View>
-            <View>
-                <Text>{titulo}</Text>
+            <View style={{ alignSelf: "center" }}>
+                <Text style={{ fontSize: 20, fontWeight: "bold", color: "white" }}>{titulo}</Text>
             </View>
         </View>
     )
@@ -25,6 +25,7 @@ export default function Header({ titulo }) {
 const styles = StyleSheet.create({
     container: {
         paddingTop: statusBarHeight,
+        flexDirection: "column",
     },
     iconback: {
         width: 30,
@@ -32,7 +33,6 @@ const styles = StyleSheet.create({
         borderRadius: 30,
         alignItems: "center",
         justifyContent: "center",
-        marginBottom: 20,
         backgroundColor: "#a19d9d"
     }
 })
