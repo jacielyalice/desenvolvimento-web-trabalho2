@@ -1,32 +1,80 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
-import Home from './pages/Home'
-import Profile from './pages/Profile'
-import Favorites from './pages/Favorites'
-import Search from './pages/Search'
+import Home from "./pages/Home";
+import Extrato from "./pages/Extrato";
+import Search from "./pages/Search";
+import Profile from "./pages/Profile";
+
+import ButtonNew from "./components/ButtonNew";
+
+import { Entypo, Feather } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
-function Routes() {
+export default function Routes() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={{
+                tabBarStyle: {
+                    backgroundColor: "#121212",
+                    borderTopColor: "transparent",
+                },
+                tabBarActiveTintColor: "#FFF",
+                headerShown: false
+            }}
+        >
             <Tab.Screen
-                nome="Home"
+                name="Inicio"
                 component={Home}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name="home" size={size} color={color} />
+                    )
+                }}
             />
+
             <Tab.Screen
-                nome="Search"
+                name="Procurar"
                 component={Search}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Feather name="search" size={size} color={color} />
+                    )
+                }}
             />
+
             <Tab.Screen
-                nome="Favorites"
-                component={Favorites}
+                name="Novo"
+                component={Home}
+                options={{
+                    tabBarLabel: "",
+                    tabBarIcon: ({ size, focused }) => (
+                        <ButtonNew size={size} focused={focused} />
+                    )
+                }}
             />
+
             <Tab.Screen
-                nome="Favorites"
-                component={Favorites}
+                name="Extrato"
+                component={Extrato}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Entypo name="notification" size={size} color={color} />
+                    )
+                }}
             />
-             </Tab.Navigator>
- )
+
+            <Tab.Screen
+                name="Perfil"
+                component={Profile}
+                options={{
+                    tabBarIcon: ({ size, color }) => (
+                        <Feather name="user" size={size} color={color} />
+                    )
+                }}
+            />
+
+        </Tab.Navigator>
+    )
 }
-export  default Routes;
