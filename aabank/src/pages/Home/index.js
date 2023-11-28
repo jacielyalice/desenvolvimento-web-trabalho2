@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     },
     saldoText: {
         fontSize: 30,
-        color: "#00FF00",
+        color: "#FFFF00",
         fontWeight: 'bold',
     },
     logo: {
